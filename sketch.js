@@ -18,6 +18,7 @@ function preload() {
 function setup(){
     createCanvas(windowWidth, windowHeight);
     //background(237, 34, 93);
+    angleMode(DEGREES);
     background(204);
     
     textSize(height/20);
