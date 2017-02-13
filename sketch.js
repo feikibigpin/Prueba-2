@@ -110,7 +110,7 @@ function deviceShaken(){
     
    
     //create objects
-    for (var i = 0; i < value*100; i++){
+    for (var i = 0; i < energy*100; i++){
         dots.push(new QuakeDots());
     } 
     
