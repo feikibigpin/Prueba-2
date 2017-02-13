@@ -20,10 +20,12 @@ function preload() {
 }
     
 function setup(){
-    button.hide();
+    
     createCanvas(windowWidth, windowHeight);
     //background(237, 34, 93);
     angleMode(DEGREES);
+    
+    button.hide();
     
      background(204);
     
@@ -167,6 +169,7 @@ this.display = function(){
     
     // result buttons
  function results() {
+     button.hide();
      image(myChile,0,0,windowWidth,windowHeight);
   
  }
