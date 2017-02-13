@@ -7,12 +7,12 @@ var maxEnergy= 1000; //max energy for eathquake
 var button1;
 var button2;
 var button3;
-var myImage;
+var myChile;
 var myResults;
 
 function preload() {
     //myResult = loadImage("images/prova1.png");
-    myImage = loadImage("imagenes/chile.png");
+    myChile = loadImage("imagenes/chile.png");
 }
     
 function setup(){
@@ -151,7 +151,7 @@ this.display = function(){
     
     // result buttons
  function results() {
-     image(myImage,0,0,windowWidth,windowHeight);
+     image(myChile,0,0,windowWidth,windowHeight);
   
  }
 
