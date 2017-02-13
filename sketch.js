@@ -23,13 +23,6 @@ function setup(){
     createCanvas(windowWidth, windowHeight);
     //background(237, 34, 93);
     background(204);
-    
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
-    fill(0);
-    noStroke();
-    text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
 }
 
 function draw(){
@@ -41,7 +34,7 @@ function draw(){
     textStyle(BOLD);
     fill(0);
     noStroke();
-    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
+    text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
      
     var magnitude = int(map(energy, 0, 1000, 0, 10)); 
     
@@ -113,6 +106,13 @@ function draw(){
 
 function deviceShaken(){
     
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    fill(0);
+    noStroke();
+    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
+    
    singleShake = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
   energy += singleShake;
   
@@ -140,7 +140,7 @@ function QuakeDots(){
     
     this.xdot = random(width/2 - d, width/2 + d); //according to ellipse area
     this.ydot = random(height/2 - d, height/2 + d); //according to ellipse area
-    this.diameter = 6;
+    this.diameter = 4;
     this.speed = 4; //according to magnitude
         
 
@@ -155,7 +155,7 @@ this.display = function(){
        this.xdot = random(width/2 - d, width/2 + d);
        this.ydot = random(height/2 - d, height/2 + d); 
        }
-    ellipse(this.xdot, this.ydot, energy*2, energy*2);
+    ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
 };
  
 }
