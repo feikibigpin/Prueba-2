@@ -127,7 +127,7 @@ function deviceShaken(){
     } 
     
 }
-
+// HACER UN IF PARA CUANDO ES MENOR, PONER TEXTO PARA QUE LO INTENTE DE NUEVO CON MAS FUERZA
 
 function QuakeDots(){ 
     var a = random(0,360);
