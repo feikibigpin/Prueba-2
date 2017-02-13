@@ -155,7 +155,7 @@ this.display = function(){
        this.xdot = random(width/2 - d, width/2 + d);
        this.ydot = random(height/2 - d, height/2 + d); 
        }
-    ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
+    ellipse(this.xdot, this.ydot, r, r);
 };
  
 }
