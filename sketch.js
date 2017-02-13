@@ -21,7 +21,9 @@ function preload() {
     
 function setup(){
     createCanvas(windowWidth, windowHeight);
-    background(237, 34, 93);
+    //background(237, 34, 93);
+    background(204);
+    
     textSize(height/20);
     textAlign(CENTER);
     textStyle(BOLD);
@@ -31,9 +33,15 @@ function setup(){
 }
 
 function draw(){
-     background(204);
-     angleMode(DEGREES);
+    background(204);
+    angleMode(DEGREES);
     
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    fill(0);
+    noStroke();
+    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
      
     var magnitude = int(map(energy, 0, 1000, 0, 10)); 
     
