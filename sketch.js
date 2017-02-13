@@ -11,8 +11,8 @@ var myImage;
 var myResults;
 
 function preload() {
-    myResult = loadImage("images/prova1.png");
-    myImage = loadImage("images/prova2.jpg");
+    //myResult = loadImage("images/prova1.png");
+    myImage = loadImage("imagenes/chile.png");
 }
     
 function setup(){
