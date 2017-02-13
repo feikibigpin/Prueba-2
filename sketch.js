@@ -18,18 +18,19 @@ function preload() {
 function setup(){
     createCanvas(windowWidth, windowHeight);
     //background(237, 34, 93);
+    background(204);
+    
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    fill(0);
+    noStroke();
+    text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
+
 }
 
 function draw(){
-     background(204);
-     angleMode(DEGREES);
     
-     textSize(height/20);
-     textAlign(CENTER);
-     textStyle(BOLD);
-     fill(0);
-     noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
     var magnitude = int(map(energy, 0, 1000, 0, 10)); 
     
@@ -47,7 +48,13 @@ function draw(){
 
     //magnitude indication
     fill(0);
-    noStroke();    
+    noStroke();   
+        
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
+
     
     textSize(height/40);
     textAlign(CENTER);
@@ -72,7 +79,7 @@ function draw(){
         
     button2 = createButton("Try again");
     button2.position((width/7)*5, (height/15)*14);
-    button2.touchStarted(clearEverything);
+    button2.touchStarted(setup);
     
    // button3 = createButton('imagens');
    // button3.position(width/3,height/3);
@@ -108,7 +115,7 @@ function deviceShaken(){
    //energy += singleShake;
   //} else { finished == true;}
     
-   
+   // HACER UN IF PARA CUANDO ES MENOR, PONER TEXTO PARA QUE LO INTENTE DE NUEVO CON MAS FUERZA
     //create objects
     for (var i = 0; i < energy*100; i++){
         dots.push(new QuakeDots());
@@ -119,7 +126,7 @@ function deviceShaken(){
 
 function QuakeDots(){ 
     var a = random(0,360);
-    var b = random(0,energy * 1.6);
+    var b = random(0,energy * 2);
     var x = sin(a) * b; // mi dà un numero che va da -b a b
     var y = cos(a) * b; // mi dà un numero che va da -b a b
     var d = dist(width/2,height/2, width/2, height/2 + x/2);
@@ -128,7 +135,7 @@ function QuakeDots(){
     
     this.xdot = random(width/2 - d, width/2 + d); //according to ellipse area
     this.ydot = random(height/2 - d, height/2 + d); //according to ellipse area
-    this.diameter = 6;
+    this.diameter = 3;
     this.speed = 4; //according to magnitude
         
 
@@ -155,12 +162,12 @@ this.display = function(){
   
  }
 
- function clearEverything() {
+ /*function clearEverything() {
     background(204);
     energy = 0;
  
  }
-
+*/
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
      }
