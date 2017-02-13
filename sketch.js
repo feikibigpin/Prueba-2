@@ -11,13 +11,13 @@ var myImage;
 var myResults;
 
 function preload() {
-    //myResult = loadImage("images/prova1.png");
+    myResult = loadImage("images/prova1.png");
     myImage = loadImage("images/prova2.jpg");
 }
     
 function setup(){
     createCanvas(windowWidth, windowHeight);
-    //background(237, 34, 93);
+    background(237, 34, 93);
 }
 
 function draw(){
@@ -59,10 +59,10 @@ function draw(){
     textStyle(BOLD);
     text(magnitude,width/2, height - height/6.7);
     
-    textSize(height/50);
-    textAlign(CENTER);
-    textStyle(NORMAL);    
-    text(energy, width/2, height - height/8);
+   // textSize(height/50);
+   // textAlign(CENTER);
+   // textStyle(NORMAL);    
+   // text(energy, width/2, height - height/8);
         
          //buttons  
           
