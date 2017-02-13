@@ -20,13 +20,10 @@ function preload() {
 }
     
 function setup(){
-    
     createCanvas(windowWidth, windowHeight);
     //background(237, 34, 93);
     angleMode(DEGREES);
     
-    button1.hide();
-    button2.hide();    
      background(204);
     
     textSize(height/20);
@@ -87,7 +84,7 @@ function draw(){
         
     button2 = createButton("Try again");
     button2.position((width/7)*5, (height/15)*14);
-    button2.touchStarted(setup);
+    button2.touchStarted(clearEverything);
     
    // button3 = createButton('imagens');
    // button3.position(width/3,height/3);
@@ -169,13 +166,11 @@ this.display = function(){
     
     // result buttons
  function results() {
-     button1.hide();
-    button2.hide();  
      image(myChile,0,0,windowWidth,windowHeight);
   
  }
 
- /*function clearEverything() {
+ function clearEverything() {
     background(204);
     energy = 0;
     textSize(height/20);
@@ -186,7 +181,7 @@ this.display = function(){
     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
  
  }
-*/
+
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
      }
