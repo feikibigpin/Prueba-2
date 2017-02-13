@@ -25,8 +25,8 @@ function setup(){
     //background(237, 34, 93);
     angleMode(DEGREES);
     
-    button.hide();
-    
+    button1.hide();
+    button2.hide();    
      background(204);
     
     textSize(height/20);
@@ -169,7 +169,8 @@ this.display = function(){
     
     // result buttons
  function results() {
-     button.hide();
+     button1.hide();
+    button2.hide();  
      image(myChile,0,0,windowWidth,windowHeight);
   
  }
