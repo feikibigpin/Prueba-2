@@ -8,6 +8,10 @@ var button1;
 var button2;
 var button3;
 var myChile;
+/*var myIndonesia;
+var myMexico;
+var myJapon;
+*/
 var myResults;
 
 function preload() {
@@ -18,19 +22,19 @@ function preload() {
 function setup(){
     createCanvas(windowWidth, windowHeight);
     background(237, 34, 93);
+    textSize(height/20);
+     textAlign(CENTER);
+     textStyle(BOLD);
+     fill(0);
+     noStroke();
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
 }
 
 function draw(){
      background(204);
      angleMode(DEGREES);
     
-     textSize(height/20);
-     textAlign(CENTER);
-     textStyle(BOLD);
-     fill(0);
-     noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
-    
+     
     var magnitude = int(map(energy, 0, 1000, 0, 10)); 
     
     if (energy > 0 && energy < maxEnergy){
@@ -158,6 +162,12 @@ this.display = function(){
  function clearEverything() {
     background(204);
     energy = 0;
+     textSize(height/20);
+     textAlign(CENTER);
+     textStyle(BOLD);
+     fill(0);
+     noStroke();
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
  
  }
 
