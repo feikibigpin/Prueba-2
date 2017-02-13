@@ -84,7 +84,7 @@ function draw(){
         
     button2 = createButton("Try again");
     button2.position((width/7)*5, (height/15)*14);
-    button2.touchStarted(clearEverything);
+    button2.touchStarted(setup);
     
    // button3 = createButton('imagens');
    // button3.position(width/3,height/3);
@@ -170,7 +170,7 @@ this.display = function(){
   
  }
 
- function clearEverything() {
+ /*function clearEverything() {
     background(204);
     energy = 0;
     textSize(height/20);
@@ -181,7 +181,7 @@ this.display = function(){
     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
  
  }
-
+*/
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
      }
