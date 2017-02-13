@@ -7,37 +7,30 @@ var maxEnergy= 1000; //max energy for eathquake
 var button1;
 var button2;
 var button3;
-var myChile;
-/*var myIndonesia;
-var myMexico;
-var myJapon;
-*/
-//var myResults;
+var myImage;
+var myResults;
 
 function preload() {
     //myResult = loadImage("images/prova1.png");
-    myChile = loadImage("imagenes/chile.png");
+    myImage = loadImage("imagenes/chile.png");
 }
     
 function setup(){
     createCanvas(windowWidth, windowHeight);
     //background(237, 34, 93);
-    angleMode(DEGREES);
-    
-     background(204);
-    
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
-    fill(0);
-    noStroke();
-    text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
 }
 
 function draw(){
+     background(204);
+     angleMode(DEGREES);
     
-     
-     
+     textSize(height/20);
+     textAlign(CENTER);
+     textStyle(BOLD);
+     fill(0);
+     noStroke();
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
+    
     var magnitude = int(map(energy, 0, 1000, 0, 10)); 
     
     if (energy > 0 && energy < maxEnergy){
@@ -54,12 +47,7 @@ function draw(){
 
     //magnitude indication
     fill(0);
-    noStroke();   
-        
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
-    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
+    noStroke();    
     
     textSize(height/40);
     textAlign(CENTER);
@@ -93,9 +81,9 @@ function draw(){
     } else if (energy > maxEnergy) {
     //display things
     background(0);
-  } //else {
-    //background(204);
-  //}
+  } else {
+    background(204);
+  }
       
    
     //draw dots and given methods (actions)
@@ -113,7 +101,6 @@ function draw(){
 
 function deviceShaken(){
     
-    
    singleShake = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
   energy += singleShake;
   
@@ -126,15 +113,13 @@ function deviceShaken(){
     for (var i = 0; i < energy*100; i++){
         dots.push(new QuakeDots());
     } 
-    background(204);
-    
     
 }
-// HACER UN IF PARA CUANDO ES MENOR, PONER TEXTO PARA QUE LO INTENTE DE NUEVO CON MAS FUERZA
+
 
 function QuakeDots(){ 
     var a = random(0,360);
-    var b = random(0,energy * 2);
+    var b = random(0,energy * 1.6);
     var x = sin(a) * b; // mi dà un numero che va da -b a b
     var y = cos(a) * b; // mi dà un numero che va da -b a b
     var d = dist(width/2,height/2, width/2, height/2 + x/2);
@@ -143,7 +128,7 @@ function QuakeDots(){
     
     this.xdot = random(width/2 - d, width/2 + d); //according to ellipse area
     this.ydot = random(height/2 - d, height/2 + d); //according to ellipse area
-    this.diameter = 3;
+    this.diameter = 6;
     this.speed = 4; //according to magnitude
         
 
@@ -166,19 +151,13 @@ this.display = function(){
     
     // result buttons
  function results() {
-     image(myChile,0,0,windowWidth,windowHeight);
+     image(myImage,0,0,windowWidth,windowHeight);
   
  }
 
  function clearEverything() {
     background(204);
     energy = 0;
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
-    fill(0);
-    noStroke();
-    text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
  
  }
 
