@@ -131,7 +131,7 @@ function deviceShaken(){
 
 function QuakeDots(){ 
     var a = random(0,360);
-    var b = random(0,energy * 1.6);
+    var b = random(0,energy * 2);
     var x = sin(a) * b; // mi dà un numero che va da -b a b
     var y = cos(a) * b; // mi dà un numero che va da -b a b
     var d = dist(width/2,height/2, width/2, height/2 + x/2);
@@ -140,7 +140,7 @@ function QuakeDots(){
     
     this.xdot = random(width/2 - d, width/2 + d); //according to ellipse area
     this.ydot = random(height/2 - d, height/2 + d); //according to ellipse area
-    this.diameter = 4;
+    this.diameter = 3;
     this.speed = 4; //according to magnitude
         
 
