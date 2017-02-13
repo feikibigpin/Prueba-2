@@ -22,8 +22,8 @@ function preload() {
 function setup(){
     createCanvas(windowWidth, windowHeight);
     //background(237, 34, 93);
-    background(204);
     angleMode(DEGREES);
+    
      background(204);
     
     textSize(height/20);
@@ -54,7 +54,12 @@ function draw(){
 
     //magnitude indication
     fill(0);
-    noStroke();    
+    noStroke();   
+        
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
     
     textSize(height/40);
     textAlign(CENTER);
@@ -123,12 +128,7 @@ function deviceShaken(){
     } 
     background(204);
     
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
-    fill(0);
-    noStroke();
-    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
+    
 }
 // HACER UN IF PARA CUANDO ES MENOR, PONER TEXTO PARA QUE LO INTENTE DE NUEVO CON MAS FUERZA
 
