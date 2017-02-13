@@ -165,7 +165,7 @@ function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
      }
 
-// function touchMoved() {
+ function touchMoved() {
      // do some stuff
       return false;
 }
