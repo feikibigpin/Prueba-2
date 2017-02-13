@@ -36,14 +36,7 @@ function setup(){
 
 function draw(){
     
-     background(204);
-    
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
-    fill(0);
-    noStroke();
-    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
+     
      
     var magnitude = int(map(energy, 0, 1000, 0, 10)); 
     
@@ -128,7 +121,14 @@ function deviceShaken(){
     for (var i = 0; i < energy*100; i++){
         dots.push(new QuakeDots());
     } 
+    background(204);
     
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    fill(0);
+    noStroke();
+    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
 }
 // HACER UN IF PARA CUANDO ES MENOR, PONER TEXTO PARA QUE LO INTENTE DE NUEVO CON MAS FUERZA
 
