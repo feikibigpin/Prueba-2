@@ -20,6 +20,7 @@ function preload() {
 }
     
 function setup(){
+    button.hide();
     createCanvas(windowWidth, windowHeight);
     //background(237, 34, 93);
     angleMode(DEGREES);
