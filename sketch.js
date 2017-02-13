@@ -12,7 +12,7 @@ var myChile;
 var myMexico;
 var myJapon;
 */
-var myResults;
+//var myResults;
 
 function preload() {
     //myResult = loadImage("images/prova1.png");
@@ -23,11 +23,11 @@ function setup(){
     createCanvas(windowWidth, windowHeight);
     background(237, 34, 93);
     textSize(height/20);
-     textAlign(CENTER);
-     textStyle(BOLD);
-     fill(0);
-     noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
+    textAlign(CENTER);
+    textStyle(BOLD);
+    fill(0);
+    noStroke();
+    text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
 }
 
 function draw(){
@@ -85,9 +85,9 @@ function draw(){
     } else if (energy > maxEnergy) {
     //display things
     background(0);
-  } else {
-    background(204);
-  }
+  } //else {
+    //background(204);
+  //}
       
    
     //draw dots and given methods (actions)
@@ -162,12 +162,12 @@ this.display = function(){
  function clearEverything() {
     background(204);
     energy = 0;
-     textSize(height/20);
-     textAlign(CENTER);
-     textStyle(BOLD);
-     fill(0);
-     noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    fill(0);
+    noStroke();
+    text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
  
  }
 
