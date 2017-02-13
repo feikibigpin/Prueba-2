@@ -23,11 +23,8 @@ function setup(){
     createCanvas(windowWidth, windowHeight);
     //background(237, 34, 93);
     background(204);
-}
-
-function draw(){
-    background(204);
     angleMode(DEGREES);
+     background(204);
     
     textSize(height/20);
     textAlign(CENTER);
@@ -35,6 +32,18 @@ function draw(){
     fill(0);
     noStroke();
     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);   
+}
+
+function draw(){
+    
+     background(204);
+    
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    fill(0);
+    noStroke();
+    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
      
     var magnitude = int(map(energy, 0, 1000, 0, 10)); 
     
@@ -106,12 +115,6 @@ function draw(){
 
 function deviceShaken(){
     
-    textSize(height/20);
-    textAlign(CENTER);
-    textStyle(BOLD);
-    fill(0);
-    noStroke();
-    text("EARTHQUAKE INTENSITY", width/2,height - height/1.1);   
     
    singleShake = abs(accelerationX) + abs(accelerationY) + abs(accelerationZ);
   energy += singleShake;
